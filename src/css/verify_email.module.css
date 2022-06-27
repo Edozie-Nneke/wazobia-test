@@ -1,0 +1,60 @@
+.verify_email {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  width: 50%;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border: 1px solid #f0f0f0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.verifyIcon {
+  font-size: 64px;
+  color: #07982f;
+}
+
+.message {
+  margin-top: 36px;
+  margin-bottom: 21px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.link {
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #004cbd;
+}
+
+.arrow {
+  position: absolute;
+  top: 1px;
+  margin-left: 9px;
+}
+
+.arrow {
+  font-size: 18px;
+}
