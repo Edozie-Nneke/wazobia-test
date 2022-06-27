@@ -1,0 +1,77 @@
+.item_card {
+  width: 29%;
+  height: 242px;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #f0f0f0;
+  border-radius: 8px;
+}
+
+.name {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #555658;
+}
+
+.itemNo {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.desc {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #555658;
+}
+
+.itemText {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #131415;
+}
+
+.btnholder {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 36px;
+}
+
+.edit {
+  margin-right: 15px;
+  width: 62px;
+  height: 36px;
+  background: #ffffff;
+  border-radius: 4px;
+  border: 2px solid #f0f0f0;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #20262f;
+}
+
+.delete {
+  width: 72px;
+  height: 36px;
+  background: #555658;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+}
+
+.edit:hover,
+.edit:focus,
+.delete:hover,
+.delete:focus {
+  cursor: pointer;
+}

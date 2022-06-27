@@ -11,6 +11,7 @@
 nav {
   width: 90%;
   height: 80%;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -21,6 +22,29 @@ nav h3 {
   font-size: 16px;
   line-height: 20px;
   color: #000000;
+}
+
+.logoutVisible {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 114px;
+  height: 44px;
+  right: 1%;
+  top: 48px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #f41e10;
+  background: #ffffff;
+  border: 1px solid #fefefe;
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.18);
+  border-radius: 3px;
+}
+
+.logoutHidden {
+  display: none;
 }
 
 .user {

@@ -7,6 +7,10 @@
   background: #fff0cb;
 }
 
+.alertVerified {
+  display: none;
+}
+
 .alert p {
   font-weight: 400;
   font-size: 14px;

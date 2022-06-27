@@ -5,5 +5,17 @@
 }
 
 .cardholder {
+  margin: 32px auto 0 auto;
   width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.openModalBtn {
+  font-size: 42px;
+  position: absolute;
+  right: 4.25%;
+  bottom: 6.25%;
+  background-color: #e5e5e5;
+  color: #004cbd;
 }
