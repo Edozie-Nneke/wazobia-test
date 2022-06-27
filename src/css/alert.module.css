@@ -1,0 +1,20 @@
+.alert {
+  width: 100%;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff0cb;
+}
+
+.alert p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #131415;
+}
+
+.alert span {
+  color: #004cbd;
+  cursor: pointer;
+}

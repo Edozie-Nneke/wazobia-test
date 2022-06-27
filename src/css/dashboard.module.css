@@ -1,0 +1,9 @@
+.dashboard {
+  width: inherit;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.cardholder {
+  width: 90%;
+}
