@@ -5,6 +5,7 @@ import { ImEye, ImEyeBlocked } from 'react-icons/im';
 
 export default function CreateAccount() {
   const [viewPassword, setViewPassword] = useState(true);
+  const [passwordError, setPasswordError] = useState(false);
 
   return (
     <section className={create_acct.create_acct}>
@@ -77,6 +78,51 @@ export default function CreateAccount() {
               />
             )}
           </div>
+
+          <ul
+            className={
+              passwordError
+                ? `${create_acct.validator_helper}`
+                : `${create_acct.hide_helper}`
+            }
+          >
+            <li>
+              <div className={create_acct.container}>
+                <div className={create_acct.round}>
+                  <input type='checkbox' checked id='checkbox' />
+                  <label htmlFor='checkbox'></label>
+                  Contains at least one uppercase letter
+                </div>
+              </div>
+            </li>
+            <li>
+              <div className={create_acct.container}>
+                <div className={create_acct.round}>
+                  <input type='checkbox' checked id='checkbox' />
+                  <label htmlFor='checkbox'></label>
+                  Contains eight characters
+                </div>
+              </div>
+            </li>
+            <li>
+              <div className={create_acct.container}>
+                <div className={create_acct.round}>
+                  <input type='checkbox' id='checkbox' />
+                  <label htmlFor='checkbox'></label>
+                  Contains at least one number
+                </div>
+              </div>
+            </li>
+            <li>
+              <div className={create_acct.container}>
+                <div className={create_acct.round}>
+                  <input type='checkbox' checked id='checkbox' />
+                  <label htmlFor='checkbox'></label>
+                  Contains eight characters
+                </div>
+              </div>
+            </li>
+          </ul>
 
           <button>Sign Up</button>
         </div>

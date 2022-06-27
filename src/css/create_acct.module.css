@@ -5,7 +5,7 @@
 }
 
 .create_acct_card {
-  margin: 100px auto auto auto;
+  margin: 50px auto auto auto;
   width: 50%;
   padding: 24px;
   background: #ffffff;
@@ -55,8 +55,27 @@
 .last_nameInput {
   width: 48%;
   margin-top: 15px;
+}
 
-  border: 1px solid red;
+.first_nameInput label,
+.last_nameInput label {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #1a1a1a;
+}
+
+.first_nameInput input,
+.last_nameInput input {
+  width: 92%;
+  padding: 10px 12px;
+  background: #fafafa;
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+  outline: none;
 }
 
 .emailInput small {
@@ -118,8 +137,50 @@ button {
   transition: background 0.3s ease;
 }
 
+.validator_helper {
+  list-style: none;
+  padding: 0;
+}
+
+.hide_helper {
+  display: none;
+}
+
 button:hover,
 button:focus {
   cursor: pointer;
   background: #555658;
+}
+
+.round {
+  position: relative;
+  color: #07982f;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.round label {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 8px;
+  height: 8px;
+  left: 0;
+  position: absolute;
+  top: 5px;
+}
+
+.round input[type='checkbox'] {
+  visibility: hidden;
+}
+
+.round input[type='checkbox']:checked + label {
+  background-color: #66bb6a;
+  border-color: #66bb6a;
+}
+
+.round input[type='checkbox']:checked + label:after {
+  opacity: 1;
 }
