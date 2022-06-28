@@ -1,0 +1,117 @@
+.overlay {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  background: #20262f;
+  opacity: 0.28;
+}
+
+.modal {
+  position: fixed;
+  width: 500px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  border-radius: 4px;
+  z-index: 100;
+}
+
+.header {
+  padding: 4px 20px;
+  border-bottom: 1px solid #efeff0;
+}
+
+.content {
+  padding: 20px;
+}
+
+.itemName {
+  margin: 4px 0;
+}
+
+.itemName label,
+.itemNote label {
+  font-family: 'Avenir';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #5f6166;
+}
+
+.itemNameWrapper {
+  width: 100%;
+}
+
+.itemNameWrapper input {
+  width: 94%;
+  padding: 10px 12px;
+  font-family: 'Avenir';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  outline: none;
+  border: 1px solid #acadaf;
+}
+
+.itemNote {
+  margin: 15px 0;
+}
+
+.itemNoteWrapper {
+  width: 100%;
+  height: 100px;
+}
+
+textarea {
+  width: 94%;
+  height: 94%;
+  padding: 10px 12px;
+  border: 1px solid #acadaf;
+  outline: none;
+  font-family: 'Avenir';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.foot {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.cancel,
+.delete {
+  font-family: 'Avenir';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.cancel {
+  margin-right: 15px;
+  width: 92px;
+  height: 40px;
+  background: #efeff0;
+  color: #20262f;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.delete {
+  width: 119px;
+  height: 40px;
+  background: #999a9b;
+  color: #ffffff;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}

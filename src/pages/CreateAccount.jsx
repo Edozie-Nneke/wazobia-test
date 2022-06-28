@@ -5,7 +5,7 @@ import { ImEye, ImEyeBlocked } from 'react-icons/im';
 
 export default function CreateAccount() {
   const [viewPassword, setViewPassword] = useState(true);
-  const [passwordError, setPasswordError] = useState(false);
+  const [passwordError] = useState(false);
 
   return (
     <section className={create_acct.create_acct}>
