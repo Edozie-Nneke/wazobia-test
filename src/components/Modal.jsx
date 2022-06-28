@@ -12,7 +12,7 @@ export const Modal = ({ open, closeModal }) => {
           <p>Create Item</p>
         </div>
 
-        <div className={modal.content}>
+        <form className={modal.content}>
           <div className={modal.itemName}>
             <label htmlFor='itemName'>Name</label>
             <div className={modal.itemNameWrapper}>
@@ -38,12 +38,12 @@ export const Modal = ({ open, closeModal }) => {
           </div>
 
           <div className={modal.foot}>
-            <button className={modal.cancel} onClick={closeModal}>
+            <button className={modal.cancelEvent} onClick={closeModal}>
               Cancel
             </button>
-            <button className={modal.delete}>Create Event</button>
+            <button className={modal.createEvent}>Create Event</button>
           </div>
-        </div>
+        </form>
       </div>
     </>,
     document.getElementById('portal')

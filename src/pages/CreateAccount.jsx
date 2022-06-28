@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 import { ImEye, ImEyeBlocked } from 'react-icons/im';
 
 export default function CreateAccount() {
-  const [viewPassword, setViewPassword] = useState(true);
-  const [passwordError] = useState(false);
+  const [viewPassword, setViewPassword] = useState(false);
+  const [passwordError] = useState(true);
 
   return (
     <section className={create_acct.create_acct}>
@@ -61,12 +61,12 @@ export default function CreateAccount() {
             <div className={create_acct.paaswordWrapper}>
               <input
                 id='password'
-                type={viewPassword ? `password` : `text`}
+                type={!viewPassword ? `password` : `text`}
                 name='password'
                 placeholder='Type your password here'
               />
             </div>
-            {viewPassword ? (
+            {!viewPassword ? (
               <ImEyeBlocked
                 className={create_acct.hidePassword}
                 onClick={() => setViewPassword(!viewPassword)}
@@ -124,7 +124,7 @@ export default function CreateAccount() {
             </li>
           </ul>
 
-          <button>Sign Up</button>
+          <button className={create_acct.signUpBtn}>Sign Up</button>
         </div>
       </article>
     </section>

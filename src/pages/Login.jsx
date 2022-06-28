@@ -4,7 +4,7 @@ import login from '../css/login.module.css';
 import { ImEye, ImEyeBlocked } from 'react-icons/im';
 
 export default function Login() {
-  const [viewPassword, setViewPassword] = useState(true);
+  const [viewPassword, setViewPassword] = useState(false);
   return (
     <section className={login.login}>
       <article className={login.login_card}>
@@ -40,7 +40,7 @@ export default function Login() {
                 placeholder='Type your password here'
               />
             </div>
-            {viewPassword ? (
+            {!viewPassword ? (
               <ImEyeBlocked
                 className={login.hidePassword}
                 onClick={() => setViewPassword(!viewPassword)}
@@ -53,7 +53,7 @@ export default function Login() {
             )}
           </div>
 
-          <button>Log in</button>
+          <button className={login.loginBtn}>Log in</button>
         </div>
       </article>
     </section>
