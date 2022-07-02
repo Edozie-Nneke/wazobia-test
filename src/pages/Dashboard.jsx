@@ -8,16 +8,28 @@ import { Modal } from '../components/Modal';
 
 export default function Dashboard() {
   const [isOpen, setIsOpen] = useState(false);
+  const [edit, setEdit] = useState(false);
+
+  const openModalForEdit = () => {
+    setEdit(true);
+    setIsOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setEdit(false);
+    setIsOpen(false);
+  };
+
   return (
     <section className={dashboard.dashboard}>
       <Alert />
       <Nav />
       <article className={dashboard.cardholder}>
-        <ItemCard />
-        <ItemCard />
-        <ItemCard />
+        <ItemCard handleSetEdit={openModalForEdit} />
+        <ItemCard handleSetEdit={openModalForEdit} />
+        <ItemCard handleSetEdit={openModalForEdit} />
       </article>
-      <Modal open={isOpen} closeModal={() => setIsOpen(false)} />
+      <Modal open={isOpen} closeModal={handleCloseModal} edit={edit} />
       <MdOutlineAddCircle
         className={dashboard.openModalBtn}
         onClick={() => setIsOpen(true)}

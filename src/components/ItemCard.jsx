@@ -1,7 +1,7 @@
 import React from 'react';
 import item_card from '../css/item_card.module.css';
 
-export const ItemCard = () => {
+export const ItemCard = ({ handleSetEdit }) => {
   return (
     <div className={item_card.item_card}>
       <div className={item_card.content}>
@@ -14,7 +14,9 @@ export const ItemCard = () => {
           veniam consequat sunt nostrud amet.
         </p>
         <div className={item_card.btnholder}>
-          <button className={item_card.edit}>Edit</button>
+          <button className={item_card.edit} onClick={handleSetEdit}>
+            Edit
+          </button>
           <button className={item_card.delete}>Delete</button>
         </div>
       </div>
