@@ -1,9 +1,17 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import nav from '../css/nav.module.css';
 import { RiArrowDownSFill } from 'react-icons/ri';
 
 export const Nav = () => {
   const [logoutVisible, setLogoutVisible] = useState(false);
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem('user');
+
+    navigate('/login');
+  };
   return (
     <div className={nav.nav}>
       <nav>
@@ -12,6 +20,7 @@ export const Nav = () => {
           className={
             logoutVisible ? `${nav.logoutVisible}` : `${nav.logoutHidden}`
           }
+          onClick={handleLogout}
         >
           Log Out
         </span>
