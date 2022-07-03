@@ -1,16 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import create_acct from '../css/create_acct.module.css';
 import { Link } from 'react-router-dom';
 import { ImEye, ImEyeBlocked } from 'react-icons/im';
+import { PasswordHelper } from '../components/PasswordHelper';
 
 export default function CreateAccount() {
   const [viewPassword, setViewPassword] = useState(false);
-  const [passwordError] = useState(true);
+  const [passwordError] = useState(false);
+  const [emailError] = useState(false);
+  const first_name = useRef('');
+  const last_name = useRef('');
+  const email = useRef('');
+  const password = useRef('');
+
+  const createUser = (e) => {
+    e.preventDefault();
+    console.log(first_name.current.value);
+  };
 
   return (
     <section className={create_acct.create_acct}>
       <article className={create_acct.create_acct_card}>
-        <div className={create_acct.content}>
+        <form className={create_acct.content}>
           <div className={create_acct.header}>
             <p className={create_acct.title}>Create An Account</p>
             <p>
@@ -27,6 +38,7 @@ export default function CreateAccount() {
                   type='text'
                   name='first_name'
                   placeholder='Type here'
+                  ref={first_name}
                 />
               </div>
             </div>
@@ -38,6 +50,7 @@ export default function CreateAccount() {
                   type='text'
                   name='last_name'
                   placeholder='Type here'
+                  ref={last_name}
                 />
               </div>
             </div>
@@ -51,9 +64,10 @@ export default function CreateAccount() {
                 type='email'
                 name='email'
                 placeholder='Type email address here'
+                ref={email}
               />
             </div>
-            <small>Wrong email format!</small>
+            <small>{emailError && `Wrong email format!`}</small>
           </div>
 
           <div className={create_acct.passwordInput}>
@@ -64,6 +78,7 @@ export default function CreateAccount() {
                 type={!viewPassword ? `password` : `text`}
                 name='password'
                 placeholder='Type your password here'
+                ref={password}
               />
             </div>
             {!viewPassword ? (
@@ -79,53 +94,12 @@ export default function CreateAccount() {
             )}
           </div>
 
-          <ul
-            className={
-              passwordError
-                ? `${create_acct.validator_helper}`
-                : `${create_acct.hide_helper}`
-            }
-          >
-            <li>
-              <div className={create_acct.container}>
-                <div className={create_acct.round}>
-                  <input type='checkbox' checked id='checkbox' />
-                  <label htmlFor='checkbox'></label>
-                  Contains at least one uppercase letter
-                </div>
-              </div>
-            </li>
-            <li>
-              <div className={create_acct.container}>
-                <div className={create_acct.round}>
-                  <input type='checkbox' checked id='checkbox' />
-                  <label htmlFor='checkbox'></label>
-                  Contains eight characters
-                </div>
-              </div>
-            </li>
-            <li>
-              <div className={create_acct.container}>
-                <div className={create_acct.round}>
-                  <input type='checkbox' id='checkbox' />
-                  <label htmlFor='checkbox'></label>
-                  Contains at least one number
-                </div>
-              </div>
-            </li>
-            <li>
-              <div className={create_acct.container}>
-                <div className={create_acct.round}>
-                  <input type='checkbox' checked id='checkbox' />
-                  <label htmlFor='checkbox'></label>
-                  Contains eight characters
-                </div>
-              </div>
-            </li>
-          </ul>
+          <PasswordHelper passwordError={passwordError} />
 
-          <button className={create_acct.signUpBtn}>Sign Up</button>
-        </div>
+          <button className={create_acct.signUpBtn} onClick={createUser}>
+            Sign Up
+          </button>
+        </form>
       </article>
     </section>
   );

@@ -12,6 +12,7 @@ export const Nav = () => {
 
     navigate('/login');
   };
+
   return (
     <div className={nav.nav}>
       <nav>
